@@ -3,7 +3,7 @@ import { useCounter, useFetch } from '../hooks'
 import { LoadingMessage } from './LoadingMessage'
 import PokemonCard from './PokemonCard';
 
-const MultipleCustomHook = () => {
+export const MultipleCustomHook = () => {
     const { counter, increment, decrement, reset } = useCounter(1);
     const { data, hasErrors, isLoading } = useFetch(`https://pokeapi.co/api/v2/pokemon/${counter}`);
 
@@ -27,4 +27,3 @@ const MultipleCustomHook = () => {
     </>
 }
 
-export default MultipleCustomHook

@@ -51,8 +51,6 @@ const SimpleForm = () => {
                 placeholder="valeria.gigena@outlook.com"
                 name="email" />
 
-          
-
             { (userName=='strider2') && <Message/>}
         </>
     )

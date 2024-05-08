@@ -27,12 +27,14 @@ export const useFetch = (url) => {
     const getFetch = async () => {
 
         if (localCache[url]) {
+         
             setState({
                 data: localCache[url],
                 isLoading: false,
                 hasErrors: false,
                 error: null
             })
+           
             return;
         } 
 
