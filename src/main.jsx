@@ -7,14 +7,16 @@ import { Padre } from './07-tarea-memo/Padre.jsx';
 
 import TodoApp from './08-useReducer/TodoApp.jsx';
 import MainApp from './09-useContext/MainApp.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-
-//<Padre/>
+  //<Padre/>
   // <FocusScreen/>
   // <SimpleForm/>
   // <TodoApp/>
+  <BrowserRouter>
   <MainApp/>
+  </BrowserRouter>
   // </React.StrictMode>
 )

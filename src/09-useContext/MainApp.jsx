@@ -1,11 +1,24 @@
 import React from 'react'
+import { Route, Routes, Navigate } from 'react-router-dom'
+import HomePage from './HomePage';
+import LoginPage from './LoginPage';
+import AboutPage from './AboutPage';
+import Navbar from './Navbar';
+import { UserProvider } from './context/UserProvider';
+
 
 const MainApp = () => {
   return (
-   <>
-   <h1>Main APP</h1>
-   <hr/>
-   </>
+    <UserProvider>
+      <Navbar />
+      <hr />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/*' element={<Navigate to="/about" />} />
+      </Routes>
+    </UserProvider>
   )
 }
 
